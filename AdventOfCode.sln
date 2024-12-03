@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventOfCode.Core", "AdventOfCode.Core\AdventOfCode.Core.csproj", "{7AF049D9-03CB-4CE1-BF12-1E961649BD09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventOfCode.Core.Tests", "AdventOfCode.Core.Tests\AdventOfCode.Core.Tests.csproj", "{ADCD1A52-7DB0-496E-B11D-461F3B755C48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventOfCode.Year2024", "AdventOfCode.Year2024\AdventOfCode.Year2024.csproj", "{69E75A15-082E-4D92-A0AA-ED9BD3D16AEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventOfCode.Year2024.Tests", "AdventOfCode.Year2024.Tests\AdventOfCode.Year2024.Tests.csproj", "{EDCA1A35-D36A-48BF-AF9B-A42B07CF4C22}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7AF049D9-03CB-4CE1-BF12-1E961649BD09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AF049D9-03CB-4CE1-BF12-1E961649BD09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AF049D9-03CB-4CE1-BF12-1E961649BD09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AF049D9-03CB-4CE1-BF12-1E961649BD09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADCD1A52-7DB0-496E-B11D-461F3B755C48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADCD1A52-7DB0-496E-B11D-461F3B755C48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADCD1A52-7DB0-496E-B11D-461F3B755C48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADCD1A52-7DB0-496E-B11D-461F3B755C48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69E75A15-082E-4D92-A0AA-ED9BD3D16AEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69E75A15-082E-4D92-A0AA-ED9BD3D16AEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69E75A15-082E-4D92-A0AA-ED9BD3D16AEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69E75A15-082E-4D92-A0AA-ED9BD3D16AEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDCA1A35-D36A-48BF-AF9B-A42B07CF4C22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDCA1A35-D36A-48BF-AF9B-A42B07CF4C22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDCA1A35-D36A-48BF-AF9B-A42B07CF4C22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDCA1A35-D36A-48BF-AF9B-A42B07CF4C22}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

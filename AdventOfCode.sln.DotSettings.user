@@ -1,0 +1,22 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AAssert_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003FLibrary_003FApplication_0020Support_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FSourcesCache_003F98514e314f1feddb3082dbe8507ecec1a81b6491c0db7dc53c2e8c13949e4360_003FAssert_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=14ed0234_002D006a_002D49af_002D8d80_002D48a6086a9fb0/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="TestTransposeEmptyMatrix" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;Or&gt;
+    &lt;TestAncestor&gt;
+      &lt;TestId&gt;NUnit3x::ADCD1A52-7DB0-496E-B11D-461F3B755C48::net9.0::AdventOfCode.Core.Tests.MatrixTests.TestTransposeEmptyMatrix&lt;/TestId&gt;
+      &lt;TestId&gt;NUnit3x::ADCD1A52-7DB0-496E-B11D-461F3B755C48::net9.0::AdventOfCode.Core.Tests.HistogramTests.TestHistogram&lt;/TestId&gt;
+      &lt;TestId&gt;NUnit3x::ADCD1A52-7DB0-496E-B11D-461F3B755C48::net9.0::AdventOfCode.Core.Tests.MatrixTests.TestTransposeNonEmptyMatrix&lt;/TestId&gt;
+      &lt;TestId&gt;NUnit3x::ADCD1A52-7DB0-496E-B11D-461F3B755C48::net9.0::AdventOfCode.Core.Tests.InputParserTests.TestIntMatrix&lt;/TestId&gt;
+      &lt;TestId&gt;NUnit3x::EDCA1A35-D36A-48BF-AF9B-A42B07CF4C22::net9.0::AdventOfCode.Year2024.Tests.Day1Tests&lt;/TestId&gt;
+      &lt;TestId&gt;NUnit3x::EDCA1A35-D36A-48BF-AF9B-A42B07CF4C22::net9.0::AdventOfCode.Year2024.Tests.Day2Tests.TestPart1Sample&lt;/TestId&gt;
+      &lt;TestId&gt;NUnit3x::EDCA1A35-D36A-48BF-AF9B-A42B07CF4C22::net9.0::AdventOfCode.Year2024.Tests.Day2Tests.TestPart1InputFile&lt;/TestId&gt;
+      &lt;TestId&gt;NUnit3x::EDCA1A35-D36A-48BF-AF9B-A42B07CF4C22::net9.0::AdventOfCode.Year2024.Tests.Day2Tests.TestPart2Sample&lt;/TestId&gt;
+      &lt;TestId&gt;NUnit3x::EDCA1A35-D36A-48BF-AF9B-A42B07CF4C22::net9.0::AdventOfCode.Year2024.Tests.Day2Tests&lt;/TestId&gt;
+      &lt;TestId&gt;NUnit3x::ADCD1A52-7DB0-496E-B11D-461F3B755C48::net9.0::AdventOfCode.Core.Tests.EnumerableTests.TestIndices&lt;/TestId&gt;
+      &lt;TestId&gt;NUnit3x::ADCD1A52-7DB0-496E-B11D-461F3B755C48::net9.0::AdventOfCode.Core.Tests.EnumerableTests&lt;/TestId&gt;
+      &lt;TestId&gt;NUnit3x::EDCA1A35-D36A-48BF-AF9B-A42B07CF4C22::net9.0::AdventOfCode.Year2024.Tests.Day3Tests.TestPart1Sample&lt;/TestId&gt;
+      &lt;TestId&gt;NUnit3x::EDCA1A35-D36A-48BF-AF9B-A42B07CF4C22::net9.0::AdventOfCode.Year2024.Tests.Day3Tests.TestPart2Sample&lt;/TestId&gt;
+    &lt;/TestAncestor&gt;
+    &lt;Project Location="/Users/tlaimer/RiderProjects/AdventOfCode/AdventOfCode.Year2024.Tests" Presentation="&amp;lt;AdventOfCode.Year2024.Tests&amp;gt;" /&gt;
+  &lt;/Or&gt;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
