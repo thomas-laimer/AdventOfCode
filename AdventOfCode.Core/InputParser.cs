@@ -8,6 +8,12 @@ public static class InputParser
         ArgumentException.ThrowIfNullOrWhiteSpace(line);
         return line.Replace("\r\n", Environment.NewLine);
     }
+
+    public static string[] SplitLines(this string str) {
+        ArgumentNullException.ThrowIfNullOrWhiteSpace(str);
+        return Normalize(str).Split(Environment.NewLine);
+    }
+    
     public static int[][] ParseIntMatrix(string input) => 
         ParseIntMatrix(input, new Regex(@"\s*\|\s*|,\s?|\s+"));
     
