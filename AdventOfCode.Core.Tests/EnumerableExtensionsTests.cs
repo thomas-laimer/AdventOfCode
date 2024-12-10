@@ -2,7 +2,7 @@ using NUnit.Framework;
 
 namespace AdventOfCode.Core.Tests;
 
-public class EnumerableTests
+public class EnumerableExtensionsTests
 {
     [Test, Parallelizable]
     public void TestIndicesArray() {

@@ -25,8 +25,13 @@ public static class InputParser
             .Select(line => line.ToArray())
             .ToArray();
     }
+
+    public static char[][] ParseCharMatrix(string input) {
+        ArgumentNullException.ThrowIfNullOrWhiteSpace(input);
+        return SplitLines(input).Select(line => line.ToCharArray()).ToArray();
+    }
     public static int[][] ParseIntLists(string input) =>
-        ParseIntLists(input, new Regex(@"\s+"));
+        ParseIntLists(input, new Regex(@"\s+|,"));
     
     public static int[][] ParseIntLists(string input, Regex separator) {
         return Normalize(input)

@@ -1,6 +1,6 @@
 namespace AdventOfCode.Core;
 
-public static class Enumerable
+public static class EnumerableExtensions
 {
     public static IEnumerable<TResult> Pairwise<TSource, TResult>(
                 this IEnumerable<TSource> source, 
@@ -22,4 +22,10 @@ public static class Enumerable
         ArgumentNullException.ThrowIfNull(source);
         return source.Where((_, i) => i != index);
     }
+
+    public static Queue<TSource> ToQueue<TSource>(this IEnumerable<TSource> source) {
+        ArgumentNullException.ThrowIfNull(source);
+        return new Queue<TSource>(source);
+    }
+
 }

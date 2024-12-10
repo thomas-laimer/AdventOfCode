@@ -1,5 +1,4 @@
 ﻿using System.Diagnostics;
-
 namespace AdventOfCode.Core;
 
 public static class Matrix
