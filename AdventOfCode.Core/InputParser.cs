@@ -13,6 +13,12 @@ public static class InputParser
         ArgumentNullException.ThrowIfNullOrWhiteSpace(str);
         return Normalize(str).Split(Environment.NewLine);
     }
+
+    public static string[] SplitOnEmptyLines(this string str)
+    {
+        ArgumentNullException.ThrowIfNullOrWhiteSpace(str);
+        return str.Split(Environment.NewLine + Environment.NewLine);
+    }
     
     public static int[][] ParseIntMatrix(string input) => 
         ParseIntMatrix(input, new Regex(@"\s*\|\s*|,\s?|\s+"));
