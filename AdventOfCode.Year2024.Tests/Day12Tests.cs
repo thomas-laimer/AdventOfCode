@@ -92,7 +92,7 @@ public class Day12Tests
     [Test]
     public void TestPart2InputFile()
     {
-        Assert.That(Day12.Part2(InputFile), Is.EqualTo(80));
+        Assert.That(Day12.Part2(InputFile), Is.EqualTo(838988));
     }
     private static string InputFile =
         """
