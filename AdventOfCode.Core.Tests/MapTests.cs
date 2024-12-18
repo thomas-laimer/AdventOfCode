@@ -2,6 +2,38 @@ namespace AdventOfCode.Core.Tests;
 
 public class MapTests
 {
+    public class FloodFill
+    {
+        private static Map<char> simpleMap = new Map<char>(InputParser.ParseCharMatrix(
+            """
+            AAAA
+            BBCD
+            BBCC
+            EEEC
+            """));
+        
+        [Test]
+        public void TestSingleRow()
+        {
+            Assert.That(simpleMap.FloodFill((0, 0)),
+                Is.EquivalentTo(new HashSet<MapPosition>([(0, 0), (0, 1), (0, 2), (0, 3)])));
+        }
+
+        [Test]
+        public void TestRectangle()
+        {
+            Assert.That(simpleMap.FloodFill((1, 0)),
+                Is.EquivalentTo(new HashSet<MapPosition>([(1, 0), (1, 1), (2, 0), (2, 1)])));
+        }
+
+        [Test]
+        public void TestComplexShape()
+        {
+            Assert.That(simpleMap.FloodFill((1, 2)),
+                Is.EquivalentTo(new HashSet<MapPosition>([(1, 2), (2, 2), (2, 3), (3, 3)])));
+        }
+    }
+    
     [Test]
     public void DiagonalsTest() {
         string[][] map = [
@@ -24,7 +56,7 @@ public class MapTests
                     
                     [(1,0), (2,1)],
                     [(2,0)]
-                    
+            
         };
         Assert.That(diagonals[0], Is.EquivalentTo(expected[0]));
         Assert.That(diagonals[1], Is.EquivalentTo(expected[1]));
@@ -37,5 +69,26 @@ public class MapTests
         Assert.That(diagonals[8], Is.EquivalentTo(expected[8]));
         Assert.That(diagonals[9], Is.EquivalentTo(expected[9]));
         // Assert.That(diagonals, Is.EquivalentTo(expected));
+    }
+
+    [Test]
+    public void TestSimpleFloodFill()
+    {
+        var map = new Map<char>(InputParser.ParseCharMatrix("""
+                                                            AAAA
+                                                            BBCD
+                                                            BBCC
+                                                            EEEC
+                                                            """));
+        var aRegion = new HashSet<MapPosition>(map.Positions.Where(pos => map[pos] == 'A'));
+        var bRegion = new HashSet<MapPosition>(map.Positions.Where(pos => map[pos] == 'B'));
+        var cRegion = new HashSet<MapPosition>(map.Positions.Where(pos => map[pos] == 'C'));
+        var dRegion = new HashSet<MapPosition>(map.Positions.Where(pos => map[pos] == 'D'));
+        var eRegion = new HashSet<MapPosition>(map.Positions.Where(pos => map[pos] == 'E'));
+
+        Assert.That(map.FloodFill(aRegion.First()), Is.EquivalentTo(aRegion));
+        Assert.That(map.FloodFill(bRegion.First()), Is.EquivalentTo(bRegion));
+        Assert.That(map.FloodFill(cRegion.First()), Is.EquivalentTo(cRegion));
+        Assert.That(map.FloodFill(dRegion.First()), Is.EquivalentTo(dRegion));
     }
 }

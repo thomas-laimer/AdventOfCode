@@ -1,3 +1,6 @@
+using System.Diagnostics;
+using System.Net.Http.Headers;
+
 namespace AdventOfCode.Core;
 
 public static class EnumerableExtensions
@@ -28,4 +31,34 @@ public static class EnumerableExtensions
         return new Queue<TSource>(source);
     }
 
+    public static (T Min, T Max) MinMax<T>(this IEnumerable<T> source) where T: IComparable<T> 
+    {
+        ArgumentNullException.ThrowIfNull(source);
+        var comparables = source as T[] ?? source.ToArray();
+        if (comparables.Length == 0)
+        {
+            throw new InvalidOperationException("The source sequence is empty.");
+        } 
+        T min = comparables[0], max = comparables[0];
+        for (int i = 1; i < comparables.Length; i++)
+        {
+            var item = comparables[i];
+            if (item.CompareTo(min) < 0)
+            {
+                min = item;
+            }
+
+            if (item.CompareTo(max) > 0)
+            {
+                max = item;
+            }
+        }
+        return (min, max);
+    }
+
+    public static (TValue Min, TValue Max) MinMaxBy<TSource, TValue>(this IEnumerable<TSource> source,
+        Func<TSource, TValue> selector) where TValue : IComparable<TValue>
+    {
+        return source.Select(selector).MinMax();
+    }
 }

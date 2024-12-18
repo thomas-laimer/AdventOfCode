@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 
 namespace AdventOfCode.Core;
 
-public class Map<T>
+public class Map<T> 
 {
     private readonly T[][] map;
     public int Rows    => map.Length;
@@ -84,7 +84,52 @@ public class Map<T>
         }
         return result.ToArray();
     }
-    //     
+
+    public HashSet<MapPosition> FloodFill(MapPosition startPosition)
+    {
+        // a pretty naive recursive flood fill algorithm converted to a loop with a stack on the clr heap 
+        // to avoid stack overflow problems and to speed the thing up a bit.
+        var value = this[startPosition];
+        var stack = new Stack<MapPosition>();
+        stack.Push(startPosition);
+        var result = new HashSet<MapPosition>();
+        while (stack.TryPop(out var current))
+        {
+            if (!this[current].Equals(value))
+                continue;
+            if (result.Contains(current))
+                continue;
+            result.Add(current);
+            MapPosition up = current.Up, right = current.Right, down = current.Down, left = current.Left;
+            if (IsInBounds(up) && !result.Contains(up))
+            {
+                stack.Push(up);
+            }
+            if (IsInBounds(right) && !result.Contains(right))
+            {
+                stack.Push(right);
+            }
+            if (IsInBounds(down) && !result.Contains(down))
+            {
+                stack.Push(down);
+            }
+
+            if (IsInBounds(left) && !result.Contains(left))
+            {
+                stack.Push(left);
+            }
+        }
+
+        return result;
+    }
+
+    public IEnumerable<MapPosition> Positions =>
+        from row in Enumerable.Range(0, Rows)
+        from col in Enumerable.Range(0, Columns)
+        select new MapPosition(row, col);
+    
+    //   
+    
     //     // left column, upwards
     //     for (var row = 0; row < Rows; row++) {
     //         var diagonal = new List<MapPosition>();
